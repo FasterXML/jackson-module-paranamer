@@ -37,8 +37,15 @@ public class SimpleTest extends ParanamerTestBase
             verifyException(e, "has no property name annotation");
         }
 
+        // then with two available modules:
         mapper = new ObjectMapper().registerModule(new ParanamerModule());
         CreatorBean bean = mapper.readValue(JSON, CreatorBean.class);
+        assertEquals("Bob", bean.name);
+        assertEquals(40, bean.age);
+
+        mapper = new ObjectMapper();
+        mapper.setAnnotationIntrospector(new ParanamerOnJacksonAnnotationIntrospector());
+        bean = mapper.readValue(JSON, CreatorBean.class);
         assertEquals("Bob", bean.name);
         assertEquals(40, bean.age);
     }

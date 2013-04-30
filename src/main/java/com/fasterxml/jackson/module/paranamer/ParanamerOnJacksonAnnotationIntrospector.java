@@ -2,6 +2,7 @@ package com.fasterxml.jackson.module.paranamer;
 
 import java.lang.reflect.*;
 
+import com.thoughtworks.paranamer.BytecodeReadingParanamer;
 import com.thoughtworks.paranamer.CachingParanamer;
 import com.thoughtworks.paranamer.Paranamer;
 
@@ -24,7 +25,7 @@ public class ParanamerOnJacksonAnnotationIntrospector
     protected final Paranamer _paranamer;
 
     public ParanamerOnJacksonAnnotationIntrospector() {
-        this(new CachingParanamer());
+        this(new CachingParanamer(new BytecodeReadingParanamer()));
     }
 
     public ParanamerOnJacksonAnnotationIntrospector(Paranamer pn) {
