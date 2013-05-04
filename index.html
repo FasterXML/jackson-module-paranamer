@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jackson-module-paranamer by FasterXML</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Jackson-module-paranamer</h1>
+        <p>Jackson extension that implements custom AnnotationIntrospector that uses Paranamer to find construct argument names</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/FasterXML/jackson-module-paranamer" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/FasterXML/jackson-module-paranamer/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/FasterXML/jackson-module-paranamer/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <p>Module that uses <a href="http://paranamer.codehaus.org">Paranamer</a> library to auto-detect names
+of Creator (constructor, static factory method, annotated with <code>@JsonCreator</code>) methods.</p>
+
+<p>Functionality consists of two <code>AnnotationIntrospector</code> implementations:</p>
+
+<ul>
+<li>
+<code>ParanamerAnnotationIntrospector</code> is a stand-alone introspector to be used with other <code>AnnotationIntrospectors</code> (usually using <code>AnnotationIntrospectorPair</code>)</li>
+<li>
+<code>ParanamerOnJacksonAnnotationIntrospector</code> is a sub-class of <code>JacksonAnnotationIntrospector</code> that can be used instead of default introspector</li>
+</ul><h2>Status</h2>
+
+<p>Version 2.2 is the first public version; but due to simplicity it should be production ready
+once official Maven release is released.</p>
+
+<h2>Usage</h2>
+
+<p>Functionality can be used either by directly overriding <code>AnnotationIntrospector</code> that <code>ObjectMapper</code> uses
+or by registering <code>ParanamerModule</code> -- module simply appends <code>ParanamerAnnotationIntrospector</code> after
+current introspector:</p>
+
+<pre><code>ObjectMapper mapper = new ObjectMapper();
+// either via module
+mapper.registerModule(new ParanamerModule());
+// or by directly assigning annotation introspector (but not both!)
+mapper.setAnnotationIntrospector(new ParanamerOnJacksonAnnotationIntrospector());
+</code></pre>
+
+<p>Maven information for jar is:</p>
+
+<ul>
+<li>Group id: <code>com.fasterxml.jackson.module</code>
+</li>
+<li>Artifact id: <code>jackson-module-paranamer</code>
+</li>
+</ul><h2>Other</h2>
+
+<p>For Javadocs, Download, see: <a href="../../jackson-module-paranamer/wiki">Wiki</a>.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/FasterXML">FasterXML</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
