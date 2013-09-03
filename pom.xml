@@ -10,6 +10,7 @@
   <artifactId>jackson-module-paranamer</artifactId>
   <name>Jackson-module-paranamer</name>
   <version>2.3.0-SNAPSHOT</version>
+  <packaging>bundle</packaging>
   <description>AnnotationIntrospectors that use Paranamer (http://paranamer.codehaus.org)
 to introspect names of constructor (and factory method) parameters.
   </description>
@@ -28,9 +29,8 @@ to introspect names of constructor (and factory method) parameters.
     <!--
      | Configuration properties for the OSGi maven-bundle-plugin
     -->
-    <osgi.export>${project.groupId}.paranamer.*; version=${project.version}
-</osgi.export>
-
+    <osgi.export>${project.groupId}.paranamer.*</osgi.export>
+    <osgi.private>com.thoughtworks.paranamer.*</osgi.private>
   </properties>
 
   <dependencies>
@@ -103,12 +103,16 @@ to introspect names of constructor (and factory method) parameters.
             <configuration>
               <artifactSet>
                 <includes>
-                  <include>com.thoughtworks.paranamer:paranamer</include>
+                  <!--
+                  trick to avoid warnings from shade plugin because package
+                  is already embedded by private-package instruction from bundle plugin
+                  -->
+                  <include>null:null</include>
                 </includes>
               </artifactSet>
               <relocations>
                 <relocation>
-                  <pattern>org.objectweb.asm</pattern>
+                  <pattern>com.thoughtworks.paranamer</pattern>
                   <shadedPattern>com.fasterxml.jackson.module.paranamer.shaded</shadedPattern>
                 </relocation>
               </relocations>
