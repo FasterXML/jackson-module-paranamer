@@ -49,4 +49,12 @@ public class SimpleTest extends ParanamerTestBase
         assertEquals("Bob", bean.name);
         assertEquals(40, bean.age);
     }
+
+    // As per [Issue#3]
+    public void testWrapper() throws Exception
+    {
+        ObjectMapper mapper = new ObjectMapper().registerModule(new ParanamerModule());
+        String json = mapper.writeValueAsString(Integer.valueOf(1));
+        assertEquals("1", json);
+    }
 }
