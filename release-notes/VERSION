@@ -1,12 +1,14 @@
 Project: jackson-module-paranamer
-Version: 2.2.3 (24-Aug-2013)
+Version: 2.3.0 (xx-Oct-2013)
 
-No functional changes.
+#3: Should not throw an exception if name not found
+ (reported by Matthew S)
 
 ------------------------------------------------------------------------
 === History: ===
 ------------------------------------------------------------------------
 
+2.2.3 (24-Aug-2013)
 2.2.2 (27-May-2013)
 
 No functional changes.
