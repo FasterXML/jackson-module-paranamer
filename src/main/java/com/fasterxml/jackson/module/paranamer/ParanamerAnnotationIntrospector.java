@@ -58,7 +58,7 @@ public class ParanamerAnnotationIntrospector
     {
         int index = param.getIndex();
         AnnotatedElement ctor = param.getOwner().getAnnotated();
-        String[] names = _paranamer.lookupParameterNames((AccessibleObject) ctor);
+        String[] names = _paranamer.lookupParameterNames((AccessibleObject) ctor, false);
         if (names != null) {
             if (index < names.length) {
                 return names[index];
