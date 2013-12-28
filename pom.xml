@@ -23,8 +23,8 @@ to introspect names of constructor (and factory method) parameters.
   </scm>
 
   <properties>
-    <jackson.core.version>2.3.1</jackson.core.version>
-    <jackson.annotations.version>2.3.0</jackson.annotations.version>
+    <jackson.version.core>2.3.1</jackson.version.core>
+    <jackson.version.annotations>2.3.0</jackson.version.annotations>
     <packageVersion.dir>com/fasterxml/jackson/module/paranamer</packageVersion.dir>
     <packageVersion.package>${project.groupId}.paranamer</packageVersion.package>
     <!--
@@ -39,7 +39,7 @@ to introspect names of constructor (and factory method) parameters.
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>${jackson.core.version}</version>
+      <version>${jackson.version.core}</version>
     </dependency>
 
     <!-- and paranamer for introspection -->
@@ -59,7 +59,7 @@ to introspect names of constructor (and factory method) parameters.
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
-      <version>${jackson.core.version}</version>
+      <version>${jackson.version.annotations}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
