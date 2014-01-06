@@ -27,7 +27,7 @@ public class TestCreatorWithNamingStrategy
 
     public void testSimpleConstructor() throws Exception
     {
-        CreatorBean bean = MAPPER.readValue("{ \"MyAge\" : 42,  \"myName\" : \"NotMyRealName\" }", CreatorBean.class);
+        CreatorBean bean = MAPPER.readValue("{ \"MyAge\" : 42,  \"MyName\" : \"NotMyRealName\" }", CreatorBean.class);
         assertEquals(42, bean.myAge);
         assertEquals("NotMyRealName", bean.myName);
     }
