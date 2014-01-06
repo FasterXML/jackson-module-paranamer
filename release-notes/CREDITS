@@ -8,3 +8,8 @@ Matthew Staebler (matthew-staebler@github)
 
 * Reported #3, contributed fix
  (2.3.0)
+
+Chris Pilsworth (cpilsworth@github)
+
+* Reported #5 (probs with PropertyNamingStrategy), contributed fix
+ (2.3.2)
