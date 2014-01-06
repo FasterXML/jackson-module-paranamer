@@ -31,12 +31,6 @@ public class ParanamerAnnotationIntrospector
     }
 
     @Override
-    public String findDeserializationName(AnnotatedParameter param)
-    {
-        return _findParaName(param);
-    }
-
-    @Override
     public PropertyName findNameForDeserialization(Annotated a)
     {
         if (a instanceof AnnotatedParameter) {

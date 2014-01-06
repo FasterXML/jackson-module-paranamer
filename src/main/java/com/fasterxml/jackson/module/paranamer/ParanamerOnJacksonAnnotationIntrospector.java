@@ -31,16 +31,6 @@ public class ParanamerOnJacksonAnnotationIntrospector
     public ParanamerOnJacksonAnnotationIntrospector(Paranamer pn) {
         _paranamer = pn;
     }
-    
-    @Override
-    public String findDeserializationName(AnnotatedParameter param)
-    {
-        String name = super.findDeserializationName(param);
-        if (name == null) {
-            name = _findParaName(param);
-        }
-        return name;
-    }
 
     @Override
     public PropertyName findNameForDeserialization(Annotated a)
