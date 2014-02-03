@@ -1,11 +1,15 @@
 Project: jackson-module-paranamer
-Version: 2.3.1 (28-Dec-2013)
+Version: 2.3.2 (xx-xxx-2014)
 
-No functional changes.
+- Upgrade Paranamer dep to 2.6.
 
 ------------------------------------------------------------------------
 === History: ===
 ------------------------------------------------------------------------
+
+2.3.1 (28-Dec-2013)
+
+No functional changes.
 
 2.3.0 (14-Nov-2013)
 
