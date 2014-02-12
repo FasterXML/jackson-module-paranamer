@@ -17,11 +17,13 @@ Functionality can be used either by directly overriding `AnnotationIntrospector`
 or by registering `ParanamerModule` -- module simply appends `ParanamerAnnotationIntrospector` after
 current introspector:
 
-    ObjectMapper mapper = new ObjectMapper();
-    // either via module
-    mapper.registerModule(new ParanamerModule());
-    // or by directly assigning annotation introspector (but not both!)
-    mapper.setAnnotationIntrospector(new ParanamerOnJacksonAnnotationIntrospector());
+```java
+ObjectMapper mapper = new ObjectMapper();
+// either via module
+mapper.registerModule(new ParanamerModule());
+// or by directly assigning annotation introspector (but not both!)
+mapper.setAnnotationIntrospector(new ParanamerOnJacksonAnnotationIntrospector());
+```
 
 Maven information for jar is:
 
