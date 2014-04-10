@@ -1,13 +1,14 @@
-package com.fasterxml.jackson.module.paranamer;
+package com.fasterxml.jackson.module.paranamer.failing;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.module.paranamer.ParanamerModule;
+import com.fasterxml.jackson.module.paranamer.ParanamerTestBase;
 
-
-public class TestCreatorWithNamingStrategy
-		extends ParanamerTestBase {
-
+// [Issue#5]
+public class TestCreatorWithNamingStrategy extends ParanamerTestBase
+{
 	static class CreatorBean
 	{
 		protected String myName;
