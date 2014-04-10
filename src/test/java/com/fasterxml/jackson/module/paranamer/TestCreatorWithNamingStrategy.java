@@ -1,10 +1,9 @@
-package com.fasterxml.jackson.module.paranamer.failing;
+package com.fasterxml.jackson.module.paranamer;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.module.paranamer.ParanamerModule;
-import com.fasterxml.jackson.module.paranamer.ParanamerTestBase;
 
 // [Issue#5]
 public class TestCreatorWithNamingStrategy extends ParanamerTestBase
@@ -28,7 +27,7 @@ public class TestCreatorWithNamingStrategy extends ParanamerTestBase
 
 	public void testSimpleConstructor() throws Exception
 	{
-		CreatorBean bean = MAPPER.readValue("{ \"MyAge\" : 42,  \"myName\" : \"NotMyRealName\" }", CreatorBean.class);
+		CreatorBean bean = MAPPER.readValue("{ \"MyAge\" : 42,  \"MyName\" : \"NotMyRealName\" }", CreatorBean.class);
 		assertEquals(42, bean.myAge);
 		assertEquals("NotMyRealName", bean.myName);
 	}
