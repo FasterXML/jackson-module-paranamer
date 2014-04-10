@@ -1,5 +1,5 @@
 Project: jackson-module-paranamer
-Version: 2.3.3 (10-Apr-2014)
+Version: 2.3.2 (10-Apr-2014)
 
 #5: Problems with PropertyNamingStrategy
  (reported by cpillsworth@github, contributed fix)
