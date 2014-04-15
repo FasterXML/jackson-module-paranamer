@@ -33,15 +33,27 @@ public class ParanamerAnnotationIntrospector
     @Override
     public PropertyName findNameForDeserialization(Annotated a)
     {
+        /* 14-Apr-2014, tatu: Important -- we should NOT introspect name here,
+         *   since we are not using annotations; instead it needs to be done
+         *   in {@link #findParameterSourceName(AnnotatedParameter)}.
+         */
+        /*
         if (a instanceof AnnotatedParameter) {
             String rawName = _findParaName((AnnotatedParameter) a);
             if (rawName != null) {
                 return new PropertyName(rawName);
             }
         }
+        */
         return null;
     }
 
+    // since 2.4
+    @Override
+    public String findParameterSourceName(AnnotatedParameter param) {
+        return _findParaName(param);
+    }
+    
     /*
     /**********************************************************
     /* Internal methods

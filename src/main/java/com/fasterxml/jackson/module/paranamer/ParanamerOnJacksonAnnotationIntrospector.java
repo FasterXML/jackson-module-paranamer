@@ -5,7 +5,6 @@ import java.lang.reflect.*;
 import com.thoughtworks.paranamer.BytecodeReadingParanamer;
 import com.thoughtworks.paranamer.CachingParanamer;
 import com.thoughtworks.paranamer.Paranamer;
-
 import com.fasterxml.jackson.databind.AnnotationIntrospector;
 import com.fasterxml.jackson.databind.PropertyName;
 import com.fasterxml.jackson.databind.introspect.*;
@@ -35,18 +34,30 @@ public class ParanamerOnJacksonAnnotationIntrospector
     @Override
     public PropertyName findNameForDeserialization(Annotated a)
     {
+        /* 14-Apr-2014, tatu: Important -- we should NOT introspect name here,
+         *   since we are not using annotations; instead it needs to be done
+         *   in {@link #findParameterSourceName(AnnotatedParameter)}.
+         */
+        /*
         PropertyName name = super.findNameForDeserialization(a);
         if (name == null) {
             if (a instanceof AnnotatedParameter) {
                 String rawName = _findParaName((AnnotatedParameter) a);
                 if (rawName != null) {
-                    name = new PropertyName(rawName);
+                    return new PropertyName(rawName);
                 }
             }
         }
-        return name;
+        */
+        return null;
     }
 
+    // since 2.4
+    @Override
+    public String findParameterSourceName(AnnotatedParameter param) {
+        return _findParaName(param);
+    }
+    
     /*
     /**********************************************************
     /* Internal methods
