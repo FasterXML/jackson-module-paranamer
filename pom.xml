@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion> 
   <parent>
-    <groupId>com.fasterxml</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>12</version>
+    <groupId>com.fasterxml.jackson</groupId>
+    <artifactId>jackson-parent</artifactId>
+    <version>2.4</version>
   </parent>
   <groupId>com.fasterxml.jackson.module</groupId>
   <artifactId>jackson-module-paranamer</artifactId>
   <name>Jackson-module-paranamer</name>
-  <version>2.4.0-SNAPSHOT</version>
+  <version>2.4.0-rc2-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <description>AnnotationIntrospectors that use Paranamer (http://paranamer.codehaus.org)
 to introspect names of constructor (and factory method) parameters.
@@ -23,8 +23,8 @@ to introspect names of constructor (and factory method) parameters.
   </scm>
 
   <properties>
-    <jackson.version.core>2.4.0-SNAPSHOT</jackson.version.core>
-    <jackson.version.annotations>${jackson.version.core}</jackson.version.annotations>
+    <version.jackson.annotations>2.4.0-rc1</version.jackson.annotations>
+    <version.jackson.core>2.4.0-rc2</version.jackson.core>
     <packageVersion.dir>com/fasterxml/jackson/module/paranamer</packageVersion.dir>
     <packageVersion.package>${project.groupId}.paranamer</packageVersion.package>
     <!--
@@ -39,7 +39,7 @@ to introspect names of constructor (and factory method) parameters.
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>${jackson.version.core}</version>
+      <version>${version.jackson.core}</version>
     </dependency>
 
     <!-- and paranamer for introspection -->
@@ -49,17 +49,11 @@ to introspect names of constructor (and factory method) parameters.
       <version>2.6</version>
     </dependency>
 
-     <!-- and for testing, JUnit is needed; as well as annotations -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.8.2</version>
-      <scope>test</scope>
-    </dependency>
+     <!-- and for testing, annotations -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
-      <version>${jackson.version.annotations}</version>
+      <version>${version.jackson.annotations}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
