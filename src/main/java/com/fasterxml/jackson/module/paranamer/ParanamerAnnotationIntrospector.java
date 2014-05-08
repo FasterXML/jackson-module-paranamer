@@ -5,6 +5,7 @@ import java.lang.reflect.AnnotatedElement;
 
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.introspect.Annotated;
+import com.fasterxml.jackson.databind.introspect.AnnotatedMember;
 import com.fasterxml.jackson.databind.introspect.AnnotatedParameter;
 import com.fasterxml.jackson.databind.introspect.NopAnnotationIntrospector;
 import com.thoughtworks.paranamer.*;
@@ -50,8 +51,11 @@ public class ParanamerAnnotationIntrospector
 
     // since 2.4
     @Override
-    public String findParameterSourceName(AnnotatedParameter param) {
-        return _findParaName(param);
+    public String findImplicitPropertyName(AnnotatedMember param) {
+        if (param instanceof AnnotatedParameter) {
+            return _findParaName((AnnotatedParameter) param);
+        }
+        return null;
     }
     
     /*

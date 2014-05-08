@@ -54,8 +54,11 @@ public class ParanamerOnJacksonAnnotationIntrospector
 
     // since 2.4
     @Override
-    public String findParameterSourceName(AnnotatedParameter param) {
-        return _findParaName(param);
+    public String findImplicitPropertyName(AnnotatedMember param) {
+        if (param instanceof AnnotatedParameter) {
+            return _findParaName((AnnotatedParameter) param);
+        }
+        return null;
     }
     
     /*
