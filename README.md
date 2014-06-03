@@ -8,8 +8,7 @@ Functionality consists of two `AnnotationIntrospector` implementations:
 
 ## Status
 
-Version 2.2 is the first public version; but due to simplicity it should be production ready
-once official Maven release is released.
+Version 2.2 is the first official version; and 2.3 is the first version considered production-ready.
 
 ## Usage
 
@@ -32,4 +31,4 @@ Maven information for jar is:
 
 ## Other
 
-For Javadocs, Download, see: [Wiki](../../jackson-module-paranamer/wiki).
+For Javadocs, Download, see: [Wiki](../../wiki).
