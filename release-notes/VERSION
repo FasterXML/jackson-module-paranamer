@@ -1,12 +1,16 @@
 Project: jackson-module-paranamer
-Version: 2.4.0 (02-Jun-2014)
+Version: 2.4.1 (17-Jun-2014)
 
-#10: Paranamer names not renamed as per PropertyNamingStrategy with Jackson 2.4
- (note; related to #5 fixed for 2.3.3)
+No changes since 2.4.0.
 
 ------------------------------------------------------------------------
 === History: ===
 ------------------------------------------------------------------------
+
+2.4.0 (02-Jun-2014)
+
+#10: Paranamer names not renamed as per PropertyNamingStrategy with Jackson 2.4
+ (note; related to #5 fixed for 2.3.3)
 
 2.3.2 (01-Mar-2014)
 
