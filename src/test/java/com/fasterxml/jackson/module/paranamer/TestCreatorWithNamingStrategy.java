@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
-
 public class TestCreatorWithNamingStrategy
-        extends ParanamerTestBase {
+    extends ParanamerTestBase
+{
 
     static class CreatorBean
     {
