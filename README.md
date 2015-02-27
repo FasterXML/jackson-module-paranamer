@@ -8,6 +8,9 @@ Functionality consists of two `AnnotationIntrospector` implementations:
 
 ## Status
 
+[![Build Status](https://travis-ci.org/FasterXML/jackson-module-paranamer.svg)](https://travis-ci.org/FasterXML/jackson-module-paranamer)
+
+
 Version 2.2 is the first official version; and 2.3 is the first version considered production-ready.
 
 ## Usage
