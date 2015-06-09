@@ -23,8 +23,8 @@ to introspect names of constructor (and factory method) parameters.
   </scm>
 
   <properties>
-    <version.jackson.annotations>2.6.0-rc1</version.jackson.annotations>
-    <version.jackson.core>2.6.0-rc1</version.jackson.core>
+    <version.jackson.annotations>2.6.0-rc2</version.jackson.annotations>
+    <version.jackson.core>2.6.0-rc2</version.jackson.core>
     <packageVersion.dir>com/fasterxml/jackson/module/paranamer</packageVersion.dir>
     <packageVersion.package>${project.groupId}.paranamer</packageVersion.package>
     <!--
