@@ -25,6 +25,11 @@ to introspect names of constructor (and factory method) parameters.
   <properties>
     <version.jackson.annotations>2.6.0-rc4</version.jackson.annotations>
     <version.jackson.core>2.6.0-rc4</version.jackson.core>
+
+    <!-- 11-Jul-2015, tatu: For some reason, 2.5.4 (default) fails...
+      -->
+    <version.plugin.bundle>2.5.3</version.plugin.bundle>
+
     <packageVersion.dir>com/fasterxml/jackson/module/paranamer</packageVersion.dir>
     <packageVersion.package>${project.groupId}.paranamer</packageVersion.package>
     <!--
@@ -88,7 +93,7 @@ to introspect names of constructor (and factory method) parameters.
         <!--  We will shade ASM, to simplify deployment, avoid version conflicts -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>2.2</version>
+        <version>2.4</version>
         <executions>
           <execution>
             <phase>package</phase>
