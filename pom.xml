@@ -9,7 +9,7 @@
   <groupId>com.fasterxml.jackson.module</groupId>
   <artifactId>jackson-module-paranamer</artifactId>
   <name>Jackson-module-paranamer</name>
-  <version>2.5.5-SNAPSHOT</version>
+  <version>2.5.5</version>
   <packaging>bundle</packaging>
   <description>AnnotationIntrospectors that use Paranamer (http://paranamer.codehaus.org)
 to introspect names of constructor (and factory method) parameters.
@@ -19,7 +19,7 @@ to introspect names of constructor (and factory method) parameters.
     <connection>scm:git:git@github.com:FasterXML/jackson-module-paranamer.git</connection>
     <developerConnection>scm:git:git@github.com:FasterXML/jackson-module-paranamer.git</developerConnection>
     <url>http://github.com/FasterXML/jackson-module-paranamer</url>    
-    <tag>HEAD</tag>
+    <tag>jackson-module-paranamer-2.5.5</tag>
   </scm>
 
   <properties>
