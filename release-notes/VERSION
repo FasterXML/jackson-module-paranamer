@@ -6,7 +6,7 @@ Project: jackson-module-paranamer
 
 2.7.0 (not yet released)
 
-No changes since 2.6.
+#13: Upgrade to paranamer 2.8 to handle classfiles with java 8 lambdas
 
 2.6.3 (12-Oct-2015)
 2.6.2 (15-Sep-2015)
