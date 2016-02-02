@@ -23,7 +23,7 @@ to introspect names of constructor (and factory method) parameters.
   </scm>
 
   <properties>
-    <version.jackson.core>2.7.0</version.jackson.core>
+    <version.jackson.core>2.7.1</version.jackson.core>
 
     <packageVersion.dir>com/fasterxml/jackson/module/paranamer</packageVersion.dir>
     <packageVersion.package>${project.groupId}.paranamer</packageVersion.package>
